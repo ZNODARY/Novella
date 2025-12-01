@@ -1,6 +1,3 @@
-# game/messaging_system/interface.rpy
-
-# Основной интерфейс сообщений (без настроек)
 screen message_interface():
     $ visible_messages = message_system.get_visible_messages()
     $ stats = message_system.get_conversation_stats()
@@ -11,7 +8,7 @@ screen message_interface():
         vbox:
             spacing 0
             
-            # Панель заголовка (только крестик для закрытия)
+            # Панель заголовка
             frame:
                 background "#1e2c3d"
                 padding (12, 8, 12, 8)
@@ -21,7 +18,7 @@ screen message_interface():
                     xfill True
                     text "Мессенджер" style "interface_header" yalign 0.5
                     
-                    # Только крестик для закрытия
+                    # Крестик для закрытия
                     textbutton "×":
                         action Return()
                         style "close_button"
@@ -104,7 +101,7 @@ screen message_interface():
                                         style "incoming_message"
                                         text "печатает..." style "message_content" at typing_animation
             
-            # Простая статусная строка
+            # Cтатусная строка
             frame:
                 background "#1e2c3d"
                 padding (15, 12, 15, 12)
@@ -116,3 +113,4 @@ screen message_interface():
                         stats["visible"], 
                         stats["total"]
                     ) style "info_text" yalign 0.5
+                    

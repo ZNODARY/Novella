@@ -1,5 +1,3 @@
-# game/messaging_system/utils.rpy
-
 init python:
     def new_message(sender, content):
         """Отправить новое сообщение"""
@@ -18,3 +16,4 @@ init python:
     def hide_message_interface():
         """Скрыть интерфейс сообщений"""
         message_system.hide_interface()
+        

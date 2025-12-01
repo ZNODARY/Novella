@@ -1,5 +1,3 @@
-# game/messaging_system/core.rpy
-
 # Persistent переменная для истории сообщений
 default persistent.message_history = []
 default persistent.message = []
@@ -12,7 +10,6 @@ init python:
             self.interface_visible = False
             self.user_typing = False
             
-            # Инициализация истории
             if not hasattr(persistent, "message_history"):
                 persistent.message_history = []
                 
@@ -22,19 +19,16 @@ init python:
             import time
             current_time = time.strftime("%H:%M")
             
-            # Добавляем сообщение
             self.all_messages.append({
                 "sender": sender, 
                 "content": content, 
                 "timestamp": current_time
             })
             
-            # Автоочистка старых сообщений
             if len(self.all_messages) > self.max_messages:
                 messages_to_remove = len(self.all_messages) - self.max_messages
                 self.all_messages = self.all_messages[messages_to_remove:]
                 
-            # Сохраняем в persistent
             persistent.message_history = self.all_messages
             
             if self.interface_visible:
@@ -78,5 +72,4 @@ init python:
             self.user_typing = False
             renpy.restart_interaction()
 
-# Создаем объект системы
 default message_system = MessageSystem()

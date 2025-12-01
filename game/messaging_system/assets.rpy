@@ -1,5 +1,3 @@
-# game/messaging_system/assets.rpy
-
 # Основные стили интерфейса
 style message_window:
     xsize 1200
