@@ -8,10 +8,13 @@ image bg phone_in_hand = "images/backgrounds/phone_in_hand.png"
 # Персонажи
 image mom evil: 
     "images/characters/mom_evil.png"
-    size(800, 1300)
+    size(700, 940)
 image mom neutral:
     "images/characters/mom_neutral.png"
-    size(800, 1300)
+    size(700, 940)
 image mom worry:
     "images/characters/mom_worry.png"
-    size(800, 1300)
+    size(700, 940)
+
+image dad:
+    "images/characters/dad.png"

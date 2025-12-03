@@ -5,18 +5,18 @@ define player = Character(None,
 )
 
 define unkown = Character("Неизвестный", 
-    color="#3390ec",
-    what_color="#3390ec",
+    color="#ffffff",
+    what_color="#ffffff",
 )
 
 
 # Второстепенные персонажи
 define mom = Character("Мать", 
-    color="#3390ec",
-    what_color="#3390ec",
+    color="#ffffff",
+    what_color="#ffffff",
 )
 
 define dad = Character("Отец", 
-    color="#3390ec",
-    what_color="#3390ec",
+    color="#ffffff",
+    what_color="#ffffff",
 )
